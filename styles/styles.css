@@ -1,4 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 :root {
-	--accent-color: #03989E;
+	/*--accent-color: #03989E;*/
+	--accent-color: #09C2CA;
+	--bg-color: #1D1D1D;
+	--text-color-light: #EBEBEB;
+	--text-color-dark: #191A1D;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color-light);
+	font-family: 'Lato', sans-serif;
+}
+
+.color-accent {
+	color: var(--accent-color);
+}
+
+h1 {
+	font-size: 4em;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* LEFT MENU */
+.menu {
+	background-color: #181818;
+	width: 13rem;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu .menu-nav {
+	width: 100%;
+	text-align: center;
+}
+
+.menu .menu-nav a {
+	display: block;
+	width: 100%;
+	line-height: 3em;
+	font-size: 1.3em;
+	text-decoration: none;
+	color: #909096;
+	border-top: 1px solid #4D4D4D;
+}
+
+.menu .menu-nav a:last-child {
+	border-bottom: 1px solid #4D4D4D;
+}
+
+.menu .menu-nav a:hover {
+	color: var(--accent-color);
+}
+
+/* MAIN CONTENT */
+main {
+	margin-left: 13rem;
+}
+
+
 
