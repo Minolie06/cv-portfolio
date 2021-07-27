@@ -55,7 +55,7 @@ a {
 	height: 20vh;
 }
 
-.menu .menu-top {
+.menu-top {
 	display:flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -91,6 +91,15 @@ a {
 
 .menu .menu-nav a:hover {
 	color: var(--accent-color);
+}
+
+.menu-bottom {
+	color: #909096;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 1em;
 }
 
 /* MAIN CONTENT */
