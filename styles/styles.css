@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
 
 :root {
 	/*--accent-color: #03989E;*/
@@ -24,6 +25,12 @@ body {
 
 h1 {
 	font-size: 4em;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color-light);
 }
 
 .container {
@@ -41,7 +48,27 @@ h1 {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+.menu-top, .menu-bottom {
+	height: 20vh;
+}
+
+.menu .menu-top {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.menu .menu-top a {
+	font-size: 4em;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.menu .menu-top .menu-top-job {
+	color: #909096;
 }
 
 .menu .menu-nav {
@@ -54,7 +81,6 @@ h1 {
 	width: 100%;
 	line-height: 3em;
 	font-size: 1.3em;
-	text-decoration: none;
 	color: #909096;
 	border-top: 1px solid #4D4D4D;
 }
