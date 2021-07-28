@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
 
 :root {
-	/*--accent-color: #03989E;*/
 	--accent-color: #09C2CA;
 	--bg-color: #1D1D1D;
 	--text-color-light: #EBEBEB;
@@ -40,26 +39,31 @@ a {
 	justify-content: center;
 }
 
-/* LEFT MENU */
+/* MENU */
 .menu {
 	background-color: #181818;
+	color: #909096;
 	width: 13rem;
 	height: 100vh;
 	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	text-align: center;
 }
 
 .menu-top, .menu-bottom {
 	height: 20vh;
+	padding: 2vh 0;
 }
 
 .menu-top {
 	display:flex;
 	flex-direction: column;
-	justify-content: space-around;
-	text-align: center;
+	justify-content: space-between;
 }
 
 .menu .menu-top a {
@@ -67,21 +71,16 @@ a {
 	font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.menu .menu-top .menu-top-job {
-	color: #909096;
-}
-
 .menu .menu-nav {
 	width: 100%;
-	text-align: center;
 }
 
 .menu .menu-nav a {
+	color: #909096;
 	display: block;
 	width: 100%;
-	line-height: 3em;
-	font-size: 1.3em;
-	color: #909096;
+	line-height: 2.8em;
+	font-size: 1.2em;
 	border-top: 1px solid #4D4D4D;
 }
 
@@ -93,13 +92,54 @@ a {
 	color: var(--accent-color);
 }
 
-.menu-bottom {
-	color: #909096;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	padding-bottom: 1em;
+.menu-bottom a {
+	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
+	padding: 1rem;
+}
+
+.menu-bottom a:hover {
+	color: #181818;
+	background-color: var(--accent-color);
+}
+
+/* MENU MOBILE */
+
+#mobile-btn {
+	z-index: 100;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+	
+#mobile-btn svg {
+	display: none;
+	width: 3em;
+	height: 3em;
+	fill: var(--accent-color);
+	background-color: #181818;
+	padding: 0.8em;
+}
+
+@media only screen and (max-width: 768px) {
+	.menu {
+		left: -100%;
+		width: 100%;
+		transition: left .5s;
+	}
+	
+	.mobile-open .menu {
+		left: 0;
+		z-index: 99;
+	}
+	
+	.mobile-open svg#mobile-btn-close, svg#mobile-btn-open {
+		display: block;
+	}
+	
+	.mobile-open svg#mobile-btn-open {
+		display: none;
+	}
 }
 
 /* MAIN CONTENT */
@@ -107,5 +147,18 @@ main {
 	margin-left: 13rem;
 }
 
+@media only screen and (max-width: 768px) {
+	main {
+		margin-left: 1em;
+	}
+}
+
+/* FOOTER */
+footer {
+	background-color: #181818;
+	color: #909096;
+	text-align: center;
+	padding: 1em;
+}
 
 
