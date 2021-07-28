@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
 
 :root {
-	/*--accent-color: #03989E;*/
 	--accent-color: #09C2CA;
 	--bg-color: #1D1D1D;
 	--text-color-light: #EBEBEB;
@@ -40,7 +39,7 @@ a {
 	justify-content: center;
 }
 
-/* LEFT MENU */
+/* MENU */
 .menu {
 	background-color: #181818;
 	color: #909096;
@@ -53,17 +52,18 @@ a {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	text-align: center;
 }
 
 .menu-top, .menu-bottom {
 	height: 20vh;
+	padding: 2vh 0;
 }
 
 .menu-top {
 	display:flex;
 	flex-direction: column;
-	justify-content: space-around;
-	text-align: center;
+	justify-content: space-between;
 }
 
 .menu .menu-top a {
@@ -73,15 +73,14 @@ a {
 
 .menu .menu-nav {
 	width: 100%;
-	text-align: center;
 }
 
 .menu .menu-nav a {
 	color: #909096;
 	display: block;
 	width: 100%;
-	line-height: 3em;
-	font-size: 1.3em;
+	line-height: 2.8em;
+	font-size: 1.2em;
 	border-top: 1px solid #4D4D4D;
 }
 
@@ -93,13 +92,18 @@ a {
 	color: var(--accent-color);
 }
 
-.menu-bottom {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	padding-bottom: 1em;
+.menu-bottom a {
+	color: var(--accent-color);
+	border: 1px solid var(--accent-color);
+	padding: 1rem;
 }
+
+.menu-bottom a:hover {
+	color: #181818;
+	background-color: var(--accent-color);
+}
+
+/* MENU MOBILE */
 
 #mobile-btn {
 	z-index: 100;
@@ -119,14 +123,13 @@ a {
 
 @media only screen and (max-width: 768px) {
 	.menu {
-		width: 0%;
-		overflow: hidden;
-		transition-property: width;
-		transition-duration: 0.4s;
+		left: -100%;
+		width: 100%;
+		transition: left .5s;
 	}
 	
 	.mobile-open .menu {
-		width: 100%;
+		left: 0;
 		z-index: 99;
 	}
 	
