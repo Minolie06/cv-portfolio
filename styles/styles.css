@@ -170,7 +170,7 @@ main {
 }
 
 main header {
-	margin: 3rem 0;
+	margin: 5rem 0;
 }
 
 /* PROJECT CARDS*/
@@ -191,7 +191,7 @@ main header {
 	
 	/*large devices */
 	
-@media screen and (min-width:801px) {
+@media screen and (min-width:768px) {
 	#projects {
 		grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
 	}
