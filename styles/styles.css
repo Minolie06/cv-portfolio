@@ -163,21 +163,53 @@ main {
 /* content */
 .container {
 	min-height: 95vh;
-	margin: 0 5%;
+	margin: 2% 5%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
+}
+
+main header {
+	margin: 5% 0;
 }
 
 /* PROJECT CARDS*/
 
-/* flip animation */
+/* size & disposition */
+
+	/*small devices: phones + portrait tablets*/
+#projects {
+	display: flex;
+	flex-wrap: wrap;	
+}
+
 .project-card {
-	width: 450px;
-	height: 350px;
+	height: auto;
+	margin-bottom: 1rem;
 	perspective: 1000px;
 }
+	/*medium devices: landscape tablets*/
+@media screen and (min-width: 768px) {
+	#projects {
+		justify-content: space-between;
+	}
+	
+	.project-card {
+		max-width: calc(50% - .5em);
+	}
+}
+	/*large devices: laptops + desktops*/
+@media screen and (min-width: 1024px) {
+	#projects {
+		justify-content: space-between;
+	}
+	
+	.project-card {
+		max-width: calc(33% - .5em);
+	}
+}
+
+/* flip animation */
 
 .card-inner {
 	position: relative;
@@ -205,6 +237,11 @@ main {
 	width: 100%;
 	height: 100%;
 	background-color: darkblue;
+}
+
+.project-card .project-img {
+	width: 100%;
+	height: auto;
 }
 
 .card-back {
