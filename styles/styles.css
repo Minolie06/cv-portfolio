@@ -86,11 +86,11 @@ a {
 	width: 100%;
 	line-height: 2.8em;
 	font-size: 1.2em;
-	border-top: 1px solid #4D4D4D;
+	/*border-top: 1px solid #4D4D4D;*/
 }
 
 .menu .menu-nav a:last-child {
-	border-bottom: 1px solid #4D4D4D;
+	/*border-bottom: 1px solid #4D4D4D;*/
 }
 
 .menu .menu-nav a:hover {
@@ -131,11 +131,11 @@ a {
 		left: -100%;
 		width: 100%;
 		transition: left .5s;
+		z-index: 99;
 	}
 	
 	.mobile-open .menu {
 		left: 0;
-		z-index: 99;
 	}
 	
 	.mobile-open svg#mobile-btn-close, svg#mobile-btn-open {
@@ -180,23 +180,16 @@ main header {
 .project-card {
 	perspective: 1000px;
 	aspect-ratio: 4/3;
+	max-width: 500px;
 }
 
-	/* small and medium device */
-	
 #projects {
 	display: grid;
-	gap: 1rem;
+	gap: 1rem; 
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(375px, max-content));
 }
 	
-	/*large devices */
-	
-@media screen and (min-width:768px) {
-	#projects {
-		grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-	}
-}
-
 /* flip animation */
 
 .card-inner {
@@ -252,16 +245,26 @@ main header {
 	font-size: 1.2em;
 }
 
-.card-back .project-links {
-	align-self: flex-end;
-}
-
 .card-back .project-links svg {
-	width: 3em;
-	height: 3em;
-	padding: 0.8em;
+	width: 5rem;
+	height: 5rem;
+	padding: 1em;
+	margin: 0 1rem;
 }
 
+@media screen and (min-width: 768px) {
+
+	.card-back .project-links {
+		align-self: flex-end;
+	}
+
+	.card-back .project-links svg {
+		width: 3em;
+		height: 3em;
+		padding: 0.8em;
+		margin: 0;
+	}
+}
 .card-back .project-links svg:hover path {
 	fill: var(--accent-color) !important;
 }
