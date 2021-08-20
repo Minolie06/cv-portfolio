@@ -89,8 +89,20 @@ a {
 	/*border-top: 1px solid #4D4D4D;*/
 }
 
-.menu .menu-nav a:last-child {
-	/*border-bottom: 1px solid #4D4D4D;*/
+.menu .menu-nav a::before {
+	width: 65%;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	border-top: 1px solid #4D4D4D;
+}
+
+.menu .menu-nav a:last-child::after {
+	width: 70%;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	border-top: 1px solid #4D4D4D;
 }
 
 .menu .menu-nav a:hover {
@@ -204,7 +216,7 @@ main header {
 	transform: rotateY(180deg);
 }
 
-.card-front, card-back {
+.card-front, .card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
