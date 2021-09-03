@@ -1,6 +1,6 @@
-/* FONT AND COLOR PALETTE */
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* #region GENERAL */
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
 
 :root {
@@ -10,8 +10,6 @@
 	--text-color-light: #EBEBEB;
 	--text-color-dark: #191A1D;
 }
-
-/* GENERAL */
 
 * {
 	box-sizing: border-box;
@@ -43,7 +41,9 @@ a {
 	color: var(--text-color-light);
 }
 
-/* MENU */
+/* #endregion */
+
+/* #region MENU */
 .menu {
 	background-color: var(--bg-color-dark);
 	color: #909096;
@@ -98,7 +98,7 @@ a {
 }
 
 .menu .menu-nav a:last-child::after {
-	width: 70%;
+	width: 65%;
 	content: "";
 	display: block;
 	margin: 0 auto;
@@ -120,7 +120,9 @@ a {
 	background-color: var(--accent-color);
 }
 
-/* MENU MOBILE */
+/* #endregion */
+
+/* #region MENU MOBILE */
 
 #mobile-btn {
 	z-index: 100;
@@ -159,9 +161,11 @@ a {
 	}
 }
 
-/* MAIN */
+/* #endregion */
 
-/* space for menu on the left */
+/* #region MAIN */
+
+	/* #region space for menu on the left */
 main {
 	margin-left: 13rem;
 }
@@ -171,8 +175,9 @@ main {
 		margin-left: 0;
 	}
 }
+	/* #endregion */
 
-/* content */
+	/* #region content */
 .container {
 	min-height: 95vh;
 	margin: 2%;
@@ -184,8 +189,24 @@ main {
 main header {
 	margin: 5rem 0;
 }
+	/* #endregion */
 
-/* PROJECT CARDS*/
+/* #endregion */
+
+/* #region FOOTER */
+
+footer {
+	height: 5vh;
+	background-color: var(--bg-color-dark);
+	color: #909096;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #endregion */
+
+/* #region PROJECTS*/
 
 /* size & disposition */
 
@@ -281,13 +302,5 @@ main header {
 	fill: var(--accent-color) !important;
 }
 
-/* FOOTER */
+/* #endregion */
 
-footer {
-	height: 5vh;
-	background-color: var(--bg-color-dark);
-	color: #909096;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
